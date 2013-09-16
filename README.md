@@ -1,0 +1,4 @@
+Vimrc
+=====
+
+My personal .vimrc
