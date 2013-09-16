@@ -1,4 +1,4 @@
 Vimrc
 =====
 
-My personal .vimrc
+My personal vim configuration
