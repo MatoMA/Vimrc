@@ -18,9 +18,6 @@ Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
 Bundle 'garbas/vim-snipmate'
 Bundle 'ervandew/supertab'
-"Bundle 'Lokaltog/vim-easymotion'
-"Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-"Bundle 'tpope/vim-rails.git'
 " vim-scripts repos
 Bundle 'The-NERD-Commenter'
 Bundle 'The-NERD-tree'
@@ -29,6 +26,7 @@ Bundle 'Colortest'
 Bundle 'AfterColors.vim'
 Bundle 'Command-T'
 Bundle 'surround.vim'
+Bundle 'EasyMotion'
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (ie. when working on your own plugin)
@@ -289,6 +287,6 @@ nmap <leader>stag :bel sp<cr><C-]>
 nmap <silent> <leader>nt :NERDTree<cr>
 
 """"""""""""""""""""""""""""""
-" SuperTab
+" surrond
 """"""""""""""""""""""""""""""
-"let g:SuperTabDefaultCompletionType = "context"
+imap <leader>s <C-s>
