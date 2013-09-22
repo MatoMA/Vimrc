@@ -252,6 +252,7 @@ nmap <C-v> "+p
 nmap <leader>q :q<cr>
 nmap <leader>qa :qa<cr>
 nmap <leader>w :w<cr>
+nmap ; A;<esc>
 
 """"""""""""""""""""""""""""""
 " BufExplorer
