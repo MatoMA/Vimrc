@@ -11,7 +11,10 @@ cp ./vimrc ~/.vimrc
 if [ -d ~/.vim/after ]
 then 
     echo "Backup .vim/after --> .vim/after_backup"
-    rm -r ~/.vim/after_backup
+    if [ -d ~/.vim/after_backup ]
+    then
+        rm -r ~/.vim/after_backup
+    fi
     mv ~/.vim/after ~/.vim/after_backup
 fi
 
