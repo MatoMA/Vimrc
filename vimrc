@@ -14,17 +14,21 @@ Bundle 'gmarik/vundle'
 " My Bundles here:
 "
 " original repos on github
-"Bundle 'tpope/vim-fugitive'
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
+Bundle 'garbas/vim-snipmate'
+Bundle 'ervandew/supertab'
 "Bundle 'Lokaltog/vim-easymotion'
 "Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 "Bundle 'tpope/vim-rails.git'
 " vim-scripts repos
+Bundle 'The-NERD-Commenter'
 Bundle 'The-NERD-tree'
 Bundle 'taglist.vim'
-Bundle 'SuperTab'
 Bundle 'Colortest'
 Bundle 'AfterColors.vim'
 Bundle 'Command-T'
+Bundle 'surround.vim'
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (ie. when working on your own plugin)
@@ -54,6 +58,9 @@ filetype indent on
 
 " Set to auto read when a file is changed from the outside
 set autoread
+
+" Set folding
+" set foldmethod=indent
 
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
@@ -280,3 +287,8 @@ nmap <leader>stag :bel sp<cr><C-]>
 " nerdTree
 """"""""""""""""""""""""""""""
 nmap <silent> <leader>nt :NERDTree<cr>
+
+""""""""""""""""""""""""""""""
+" SuperTab
+""""""""""""""""""""""""""""""
+"let g:SuperTabDefaultCompletionType = "context"
