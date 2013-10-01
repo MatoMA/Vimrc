@@ -27,6 +27,7 @@ Bundle 'AfterColors.vim'
 Bundle 'Command-T'
 Bundle 'surround.vim'
 Bundle 'EasyMotion'
+Bundle 'a.vim'
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (ie. when working on your own plugin)
