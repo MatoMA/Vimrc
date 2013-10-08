@@ -31,3 +31,12 @@ fi
 
 echo "Install plugins"
 vim +BundleInstall +qall
+
+echo "Install snippets"
+if [ -d ~/.vim/bundle/vim-snipmate/snippets ]
+then
+    cp ./snippets/* ~/.vim/bundle/vim-snipmate/snippets/
+else
+    cp -r ./snippets ~/.vim/bundle/vim-snipmate/snippets
+fi
+ 
