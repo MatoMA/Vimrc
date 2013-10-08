@@ -1,0 +1,29 @@
+snippet include
+	#include ${1}
+
+snippet once
+	#pragma once
+
+snippet namespace
+	namespace ${1} {
+		${0}
+	}
+
+snippet class
+	class ${1:} {
+		public:
+			$1();
+			~$1();
+
+		private:
+			${0}
+	};
+
+snippet main
+	int main(int argc, char* argv[]) {
+		${1}
+		return 0;
+	}
+
+snippet cout
+	std::cout << ${1} << std::endl;
