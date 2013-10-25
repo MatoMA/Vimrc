@@ -24,10 +24,13 @@ Bundle 'The-NERD-tree'
 Bundle 'taglist.vim'
 Bundle 'Colortest'
 Bundle 'AfterColors.vim'
-Bundle 'Command-T'
+"Bundle 'Command-T'
+Bundle 'ctrlp.vim'
 Bundle 'surround.vim'
 Bundle 'EasyMotion'
 Bundle 'a.vim'
+Bundle 'Solarized'
+Bundle 'neocomplcache'
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (ie. when working on your own plugin)
@@ -119,10 +122,12 @@ set incsearch
 " Enable syntax highlighting
 syntax enable
 
-colorscheme desert
+set background=dark
+colorscheme solarized
+"colorscheme desert
 "colorscheme solarized
 "let g:solarized_termcolors=256
-set background=dark
+"set background=dark
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -252,7 +257,10 @@ nmap <C-v> "+p
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <leader>q :q<cr>
 nmap <leader>qa :qa<cr>
+nmap <C-q> :q<cr>
 nmap <leader>w :w<cr>
+nmap <leader>wa :wa<cr>
+nmap <C-s> :w<cr>
 nmap ; A;<esc>
 
 """"""""""""""""""""""""""""""
@@ -294,3 +302,7 @@ nmap <silent> <leader>nt :NERDTree<cr>
 " surrond
 """"""""""""""""""""""""""""""
 imap <leader>s <C-s>
+
+""""""""""""""""""""""""""""""
+" SuperTab
+""""""""""""""""""""""""""""""
