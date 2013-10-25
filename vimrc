@@ -21,7 +21,8 @@ Bundle 'ervandew/supertab'
 " vim-scripts repos
 Bundle 'The-NERD-Commenter'
 Bundle 'The-NERD-tree'
-Bundle 'taglist.vim'
+"Bundle 'taglist.vim'
+Bundle 'Tagbar'
 Bundle 'Colortest'
 Bundle 'AfterColors.vim'
 "Bundle 'Command-T'
@@ -306,3 +307,15 @@ imap <leader>s <C-s>
 """"""""""""""""""""""""""""""
 " SuperTab
 """"""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""
+" NeoComplCache
+""""""""""""""""""""""""""""""
+let g:neocomplcache_enable_at_startup=1
+let g:neocomplcache_max_list=20
+let g:neocomplcache_enable_ignore_case=1
+let g:neocomplcache_dictionary_filetype_lists = {
+    \ 'cpp' : '',
+    \ 'javascript' : ''
+    \ }
+nmap <leader>nc :NeoComplCacheToggle<cr>
