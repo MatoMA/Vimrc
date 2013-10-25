@@ -21,17 +21,16 @@ Bundle 'ervandew/supertab'
 " vim-scripts repos
 Bundle 'The-NERD-Commenter'
 Bundle 'The-NERD-tree'
-"Bundle 'taglist.vim'
 Bundle 'Tagbar'
 Bundle 'Colortest'
 Bundle 'AfterColors.vim'
-"Bundle 'Command-T'
 Bundle 'ctrlp.vim'
 Bundle 'surround.vim'
 Bundle 'EasyMotion'
 Bundle 'a.vim'
 Bundle 'Solarized'
 Bundle 'neocomplcache'
+Bundle 'AutoClose'
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (ie. when working on your own plugin)
@@ -277,22 +276,6 @@ let g:bufExplorerSplitRight=1
 nmap <leader>al :A<cr>
 nmap <leader>vsal :abo vs<cr>:A<cr>
 nmap <leader>spal :abo sp<cr>:A<cr>
-
-""""""""""""""""""""""""""""""
-" Tag list (ctags)
-""""""""""""""""""""""""""""""
-if has('mac')
-    let Tlist_Ctags_Cmd = '/opt/local/bin/ctags'
-endif
-let Tlist_Show_One_File = 1            "不同时显示多个文件的tag，只显示当前文件的
-let Tlist_Exit_OnlyWindow = 1          "如果taglist窗口是最后一个窗口，则退出vim
-let Tlist_Use_Right_Window = 1         "在右侧窗口中显示taglist窗口
-let Tlist_WinWidth = 50
-set tags=tags;
-set autochdir 
-nmap <leader>tl :Tlist<cr>
-nmap <leader>vtag :bel vs<cr><C-]>
-nmap <leader>stag :bel sp<cr><C-]>
 
 """"""""""""""""""""""""""""""
 " nerdTree
