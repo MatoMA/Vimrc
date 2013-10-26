@@ -19,6 +19,7 @@ Bundle 'tomtom/tlib_vim'
 Bundle 'garbas/vim-snipmate'
 Bundle 'ervandew/supertab'
 Bundle 'Rip-Rip/clang_complete'
+Bundle 'Shougo/neocomplcache.vim'
 " vim-scripts repos
 Bundle 'The-NERD-Commenter'
 Bundle 'The-NERD-tree'
@@ -122,7 +123,6 @@ set incsearch
 " Enable syntax highlighting
 syntax enable
 
-set background=dark
 colorscheme solarized
 "colorscheme desert
 "colorscheme solarized
@@ -131,10 +131,13 @@ colorscheme solarized
 
 " Set extra options when running in GUI mode
 if has("gui_running")
+    set background=dark
     set guioptions-=T
     set guioptions+=e
     set t_Co=256
     set guitablabel=%M\ %t
+else
+    set background=light
 endif
 
 " Set utf8 as standard encoding and en_US as the standard language
@@ -293,12 +296,20 @@ imap <leader>s <C-s>
 let g:SuperTabDefaultCompletionType='context'
 
 """"""""""""""""""""""""""""""
+" NeoComplCache
+""""""""""""""""""""""""""""""
+let g:neocomplcache_enable_at_startup = 1
+
+""""""""""""""""""""""""""""""
 " clang_complete
 """"""""""""""""""""""""""""""
 let g:clang_complete_copen = 1
 let g:clang_snippets = 1
 let g:clang_snippets_engine = 'clang_complete'
 let g:clang_trailing_placeholder = 1
-let g:clang_user_options = '-std=c++0x -stdlib=libc++'
+let g:clang_user_options = '-std=c++11 -stdlib=libc++'
 let g:clang_periodic_quickfix = 0
 let g:clang_close_preview = 1
+if has('mac')
+    let g:clang_library_path = '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib'
+endif
