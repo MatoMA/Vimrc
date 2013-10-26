@@ -290,3 +290,15 @@ imap <leader>s <C-s>
 """"""""""""""""""""""""""""""
 " SuperTab
 """"""""""""""""""""""""""""""
+let g:SuperTabDefaultCompletionType='context'
+
+""""""""""""""""""""""""""""""
+" clang_complete
+""""""""""""""""""""""""""""""
+let g:clang_complete_copen = 1
+let g:clang_snippets = 1
+let g:clang_snippets_engine = 'clang_complete'
+let g:clang_trailing_placeholder = 1
+let g:clang_user_options = '-std=c++0x -stdlib=libc++'
+let g:clang_periodic_quickfix = 0
+let g:clang_close_preview = 1
