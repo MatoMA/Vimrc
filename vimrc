@@ -29,7 +29,6 @@ Bundle 'surround.vim'
 Bundle 'EasyMotion'
 Bundle 'a.vim'
 Bundle 'Solarized'
-Bundle 'neocomplcache'
 Bundle 'AutoClose'
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
@@ -290,15 +289,3 @@ imap <leader>s <C-s>
 """"""""""""""""""""""""""""""
 " SuperTab
 """"""""""""""""""""""""""""""
-
-""""""""""""""""""""""""""""""
-" NeoComplCache
-""""""""""""""""""""""""""""""
-let g:neocomplcache_enable_at_startup=1
-let g:neocomplcache_max_list=20
-let g:neocomplcache_enable_ignore_case=1
-let g:neocomplcache_dictionary_filetype_lists = {
-    \ 'cpp' : '',
-    \ 'javascript' : ''
-    \ }
-nmap <leader>nc :NeoComplCacheToggle<cr>
