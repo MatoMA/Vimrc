@@ -18,6 +18,7 @@ Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
 Bundle 'garbas/vim-snipmate'
 Bundle 'ervandew/supertab'
+Bundle 'Rip-Rip/clang_complete'
 " vim-scripts repos
 Bundle 'The-NERD-Commenter'
 Bundle 'The-NERD-tree'
