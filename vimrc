@@ -73,6 +73,20 @@ let g:mapleader = ","
 " Fast saving
 nmap <leader>w :w!<cr>
 
+functio! GetRunningOS()
+    if has('win32')
+        return 'win'
+    endif
+    if has('unix')
+        if system('uname')=~'Darwin'
+            return 'mac'
+        else
+            return 'linux'
+        endif
+    endif
+endfunction
+let os = GetRunningOS()
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -137,7 +151,11 @@ if has("gui_running")
     set t_Co=256
     set guitablabel=%M\ %t
 else
-    set background=light
+    if os=='mac'
+        set background=light
+    else
+        set background=dark
+    endif
 endif
 
 " Set utf8 as standard encoding and en_US as the standard language
