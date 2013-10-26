@@ -137,7 +137,6 @@ set incsearch
 " Enable syntax highlighting
 syntax enable
 
-colorscheme solarized
 "colorscheme desert
 "colorscheme solarized
 "let g:solarized_termcolors=256
@@ -157,6 +156,7 @@ else
         set background=dark
     endif
 endif
+colorscheme solarized
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
