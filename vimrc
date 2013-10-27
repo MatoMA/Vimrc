@@ -279,6 +279,7 @@ nmap <C-v> "+p
 nmap <leader>q :q<cr>
 nmap <leader>qa :qa<cr>
 nmap <C-q> :q<cr>
+nmap <leader>wq :wq<cr>
 nmap <leader>w :w<cr>
 nmap <leader>wa :wa<cr>
 nmap <C-s> :w<cr>
