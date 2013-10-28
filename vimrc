@@ -139,7 +139,6 @@ set incsearch
 " Enable syntax highlighting
 syntax enable
 
-"colorscheme desert
 "colorscheme solarized
 "let g:solarized_termcolors=256
 "set background=dark
@@ -151,14 +150,22 @@ if has("gui_running")
     set guioptions+=e
     set t_Co=256
     set guitablabel=%M\ %t
+    if os=='mac'
+        set background=dark
+        colorscheme solarized
+    else
+        set background=dark
+        colorscheme desert
+    endif
 else
     if os=='mac'
         set background=light
+        colorscheme desert
     else
         set background=dark
+        colorscheme desert
     endif
 endif
-colorscheme solarized
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
@@ -227,6 +234,7 @@ map <leader>ex :Explore<cr>
 
 " Useful mappings for managing tabs
 map <leader>tn :tabnew<cr>
+map <c-t> :tabnew<cr>
 map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove
@@ -280,7 +288,6 @@ nmap <C-v> "+p
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <leader>q :q<cr>
 nmap <leader>qa :qa<cr>
-nmap <C-q> :q<cr>
 nmap <leader>wq :wq<cr>
 nmap <leader>w :w<cr>
 nmap <leader>wa :wa<cr>
@@ -329,7 +336,7 @@ let g:clang_snippets = 1
 let g:clang_snippets_engine = 'clang_complete'
 let g:clang_trailing_placeholder = 1
 let g:clang_user_options = '-std=c++11 -stdlib=libc++'
-let g:clang_periodic_quickfix = 0
+let g:clang_periodic_quickfix = 1
 let g:clang_close_preview = 1
 if has('mac')
     let g:clang_library_path = '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib'
