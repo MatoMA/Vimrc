@@ -326,7 +326,7 @@ let g:SuperTabDefaultCompletionType='context'
 """"""""""""""""""""""""""""""
 " NeoComplCache
 """"""""""""""""""""""""""""""
-let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_at_startup = 0
 
 """"""""""""""""""""""""""""""
 " clang_complete
@@ -336,7 +336,7 @@ let g:clang_snippets = 1
 let g:clang_snippets_engine = 'clang_complete'
 let g:clang_trailing_placeholder = 1
 let g:clang_user_options = '-std=c++11 -stdlib=libc++'
-let g:clang_periodic_quickfix = 1
+let g:clang_periodic_quickfix = 0
 let g:clang_close_preview = 1
 if has('mac')
     let g:clang_library_path = '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib'
