@@ -22,6 +22,7 @@ Bundle 'Rip-Rip/clang_complete'
 Bundle 'Shougo/neocomplcache.vim'
 Bundle 'Shougo/vimproc.vim'
 Bundle 'Shougo/vimshell.vim'
+Bundle 'davidhalter/jedi-vim'
 " vim-scripts repos
 Bundle 'The-NERD-Commenter'
 Bundle 'The-NERD-tree'
