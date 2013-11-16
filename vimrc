@@ -21,8 +21,11 @@ Bundle 'ervandew/supertab'
 Bundle 'Rip-Rip/clang_complete'
 Bundle 'Shougo/neocomplcache.vim'
 Bundle 'Shougo/vimproc.vim'
+Bundle 'Shougo/neosnippet.vim'
 Bundle 'Shougo/vimshell.vim'
 Bundle 'davidhalter/jedi-vim'
+Bundle 'jelera/vim-javascript-syntax'
+Bundle 'plasticboy/vim-markdown'
 " vim-scripts repos
 Bundle 'The-NERD-Commenter'
 Bundle 'The-NERD-tree'
@@ -327,7 +330,7 @@ let g:SuperTabDefaultCompletionType='context'
 """"""""""""""""""""""""""""""
 " NeoComplCache
 """"""""""""""""""""""""""""""
-let g:neocomplcache_enable_at_startup = 0
+let g:neocomplcache_enable_at_startup = 1
 
 """"""""""""""""""""""""""""""
 " clang_complete
@@ -336,9 +339,37 @@ let g:clang_complete_copen = 1
 let g:clang_snippets = 1
 let g:clang_snippets_engine = 'clang_complete'
 let g:clang_trailing_placeholder = 1
-let g:clang_user_options = '-std=c++11 -stdlib=libc++'
+let g:clang_user_options = '-std=c++11'
 let g:clang_periodic_quickfix = 0
 let g:clang_close_preview = 1
 if has('mac')
     let g:clang_library_path = '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib'
 endif
+
+""""""""""""""""""""""""""""""
+" NeoSnippet
+""""""""""""""""""""""""""""""
+" Plugin key-mappings"
+imap <C-k> <Plug>(neosnippet_expand_or_jump)
+smap <C-k> <Plug>(neosnippet_expand_or_jump)
+xmap <C-k> <Plug>(neosnippet_expand_target)
+"SuperTab like snippets behavior."
+imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\: pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\: "\<TAB>"
+
+" For snippet_complete marker.
+if has('conceal')
+  set conceallevel=2 concealcursor=i
+endif
+
+let g:neosnippet#enable_snipmate_compatibility = 1
+"let g:neosnippet#snippets_directory=""
+
+""""""""""""""""""""""""""""""
+" Vim-Markdown
+""""""""""""""""""""""""""""""
+let g:vim_markdown_folding_disabled = 1
