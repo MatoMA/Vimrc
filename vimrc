@@ -26,6 +26,8 @@ Bundle 'Shougo/vimshell.vim'
 Bundle 'davidhalter/jedi-vim'
 Bundle 'jelera/vim-javascript-syntax'
 Bundle 'plasticboy/vim-markdown'
+Bundle 'mattn/emmet-vim'
+Bundle 'othree/html5.vim'
 " vim-scripts repos
 Bundle 'The-NERD-Commenter'
 Bundle 'The-NERD-tree'
@@ -298,6 +300,10 @@ nmap <leader>wa :wa<cr>
 nmap <C-s> :w<cr>
 nmap ; A;<esc>
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Filetype Settings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 """"""""""""""""""""""""""""""
 " BufExplorer
 """"""""""""""""""""""""""""""
@@ -373,3 +379,19 @@ let g:neosnippet#enable_snipmate_compatibility = 1
 " Vim-Markdown
 """"""""""""""""""""""""""""""
 let g:vim_markdown_folding_disabled = 1
+
+"ejs syntax highlight
+function! EJS_Configuration()
+    set filetype=html
+    let g:surround_{char2nr("%")} = "<% \r %>"
+    let g:surround_{char2nr("-")} = "<%- \r %>"
+    let g:surround_{char2nr("=")} = "<%= \r %>"
+endfunction
+au BufNewFile,BufRead *.ejs :call EJS_Configuration()<cr>
+
+""""""""""""""""""""""""""""""
+" VimShell
+""""""""""""""""""""""""""""""
+if os=='mac'
+    let g:vimshell_editor_command = '/opt/local/bin/mvim'
+endif
