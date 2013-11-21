@@ -372,6 +372,7 @@ if has('conceal')
   set conceallevel=2 concealcursor=i
 endif
 
+let g:neocomplcache_max_list = 8
 let g:neosnippet#enable_snipmate_compatibility = 1
 "let g:neosnippet#snippets_directory=""
 
@@ -395,3 +396,9 @@ au BufNewFile,BufRead *.ejs :call EJS_Configuration()<cr>
 if os=='mac'
     let g:vimshell_editor_command = '/opt/local/bin/mvim'
 endif
+
+""""""""""""""""""""""""""""""
+" Jedi
+""""""""""""""""""""""""""""""
+let g:jedi#popup_on_dot = 0
+let g:jedi#show_call_signatures = 0
