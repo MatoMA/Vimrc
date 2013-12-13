@@ -405,3 +405,9 @@ endif
 """"""""""""""""""""""""""""""
 let g:jedi#popup_on_dot = 0
 let g:jedi#show_call_signatures = 0
+
+""""""""""""""""""""""""""""""
+" lua
+""""""""""""""""""""""""""""""
+let g:lua_inspect_warnings = 0
+let g:loaded_luainspect = 0
