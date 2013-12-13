@@ -28,6 +28,7 @@ Bundle 'jelera/vim-javascript-syntax'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'mattn/emmet-vim'
 Bundle 'othree/html5.vim'
+Bundle 'xolox/vim-misc'
 " vim-scripts repos
 Bundle 'The-NERD-Commenter'
 Bundle 'The-NERD-tree'
