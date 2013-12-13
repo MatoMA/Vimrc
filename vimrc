@@ -40,6 +40,8 @@ Bundle 'EasyMotion'
 Bundle 'a.vim'
 Bundle 'Solarized'
 Bundle 'AutoClose'
+Bundle 'lua.vim'
+Bundle 'luainspect.vim'
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (ie. when working on your own plugin)
