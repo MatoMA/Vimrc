@@ -43,6 +43,7 @@ Bundle 'Solarized'
 Bundle 'AutoClose'
 Bundle 'lua.vim'
 Bundle 'luainspect.vim'
+Bundle 'netrw.vim'
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (ie. when working on your own plugin)
@@ -405,9 +406,20 @@ endif
 """"""""""""""""""""""""""""""
 let g:jedi#popup_on_dot = 0
 let g:jedi#show_call_signatures = 0
+let g:jedi#popup_select_first = 0
 
 """"""""""""""""""""""""""""""
 " lua
 """"""""""""""""""""""""""""""
 let g:lua_inspect_warnings = 0
 let g:loaded_luainspect = 0
+
+" NeoComplCache <> Jedi
+" make neocomplcache use jedi#completions omini function for python scripts
+if !exists('g:neocomplcache_omni_functions')
+    let g:neocomplcache_omni_functions = {}
+    let g:neocomplcache_omni_functions['python'] = 'jedi#completions'
+endif
+" make Vim call omni function when below patterns matchs
+let g:neocomplcache_force_omni_patterns = {}
+let g:neocomplcache_force_omni_patterns.python = '[^. \t]\.\w*'
