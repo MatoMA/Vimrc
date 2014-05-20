@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 if [ -f ~/.vimrc ]
 then 
     echo "Backup .vimrc --> .vimrc_backup"
