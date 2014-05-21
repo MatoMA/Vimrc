@@ -321,6 +321,8 @@ let g:bufExplorerSplitRight=1
 nmap <leader>al :A<cr>
 nmap <leader>vsal :abo vs<cr>:A<cr>
 nmap <leader>spal :abo sp<cr>:A<cr>
+autocmd FileType objc let g:alternateExtensions_h = 'm'
+autocmd FileType objc let g:alternateExtensions_m = 'h'
 
 """"""""""""""""""""""""""""""
 " nerdTree
@@ -402,12 +404,6 @@ if os=='mac'
 endif
 
 """"""""""""""""""""""""""""""
-" VimShell
-""""""""""""""""""""""""""""""
-autocmd FileType objc let g:alternateExtensions_h = 'm'
-autocmd FileType objc let g:alternateExtensions_m = 'h'
-
-""""""""""""""""""""""""""""""
 " Jedi
 """"""""""""""""""""""""""""""
 let g:jedi#popup_on_dot = 0
@@ -420,7 +416,9 @@ let g:jedi#popup_select_first = 0
 let g:lua_inspect_warnings = 0
 let g:loaded_luainspect = 0
 
+""""""""""""""""""""""""""""""
 " NeoComplCache <> Jedi
+""""""""""""""""""""""""""""""
 " make neocomplcache use jedi#completions omini function for python scripts
 if !exists('g:neocomplcache_omni_functions')
     let g:neocomplcache_omni_functions = {}
@@ -429,3 +427,41 @@ endif
 " make Vim call omni function when below patterns matchs
 let g:neocomplcache_force_omni_patterns = {}
 let g:neocomplcache_force_omni_patterns.python = '[^. \t]\.\w*'
+
+""""""""""""""""""""""""""""""
+" Tagbar
+""""""""""""""""""""""""""""""
+" add a definition for Objective-C to tagbar
+let g:tagbar_type_objc = {
+    \ 'ctagstype' : 'ObjectiveC',
+    \ 'kinds'     : [
+        \ 'i:interface',
+        \ 'I:implementation',
+        \ 'p:Protocol',
+        \ 'm:Object_method',
+        \ 'c:Class_method',
+        \ 'v:Global_variable',
+        \ 'F:Object field',
+        \ 'f:function',
+        \ 'p:property',
+        \ 't:type_alias',
+        \ 's:type_structure',
+        \ 'e:enumeration',
+        \ 'M:preprocessor_macro',
+    \ ],
+    \ 'sro'        : ' ',
+    \ 'kind2scope' : {
+        \ 'i' : 'interface',
+        \ 'I' : 'implementation',
+        \ 'p' : 'Protocol',
+        \ 's' : 'type_structure',
+        \ 'e' : 'enumeration'
+    \ },
+    \ 'scope2kind' : {
+        \ 'interface'      : 'i',
+        \ 'implementation' : 'I',
+        \ 'Protocol'       : 'p',
+        \ 'type_structure' : 's',
+        \ 'enumeration'    : 'e'
+    \ }
+\ }
