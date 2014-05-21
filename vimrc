@@ -402,6 +402,12 @@ if os=='mac'
 endif
 
 """"""""""""""""""""""""""""""
+" VimShell
+""""""""""""""""""""""""""""""
+autocmd FileType objc let g:alternateExtensions_h = 'm'
+autocmd FileType objc let g:alternateExtensions_m = 'h'
+
+""""""""""""""""""""""""""""""
 " Jedi
 """"""""""""""""""""""""""""""
 let g:jedi#popup_on_dot = 0
