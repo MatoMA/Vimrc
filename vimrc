@@ -44,6 +44,7 @@ Bundle 'AutoClose'
 Bundle 'lua.vim'
 Bundle 'luainspect.vim'
 Bundle 'netrw.vim'
+Bundle 'matchit.zip'
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (ie. when working on your own plugin)
