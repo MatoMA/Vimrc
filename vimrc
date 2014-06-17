@@ -16,12 +16,12 @@ Bundle 'gmarik/vundle'
 " original repos on github
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
-Bundle 'garbas/vim-snipmate'
 Bundle 'ervandew/supertab'
 Bundle 'Rip-Rip/clang_complete'
 Bundle 'Shougo/neocomplcache.vim'
-Bundle 'Shougo/vimproc.vim'
 Bundle 'Shougo/neosnippet.vim'
+Bundle 'Shougo/neosnippet-snippets'
+Bundle 'Shougo/vimproc.vim'
 Bundle 'Shougo/vimshell.vim'
 Bundle 'davidhalter/jedi-vim'
 Bundle 'jelera/vim-javascript-syntax'
@@ -380,7 +380,7 @@ if has('conceal')
 endif
 
 let g:neocomplcache_max_list = 8
-let g:neosnippet#enable_snipmate_compatibility = 1
+"let g:neosnippet#enable_snipmate_compatibility = 1
 "let g:neosnippet#snippets_directory=""
 
 """"""""""""""""""""""""""""""
