@@ -45,6 +45,7 @@ Bundle 'lua.vim'
 Bundle 'luainspect.vim'
 Bundle 'netrw.vim'
 Bundle 'matchit.zip'
+Bundle 'Distinguished'
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (ie. when working on your own plugin)
@@ -173,8 +174,8 @@ else
         set background=light
         colorscheme desert
     else
-        set background=dark
-        colorscheme desert
+        set t_Co=256
+        colorscheme distinguished
     endif
 endif
 
