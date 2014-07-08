@@ -17,7 +17,6 @@ Bundle 'gmarik/vundle'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
 Bundle 'ervandew/supertab'
-Bundle 'Rip-Rip/clang_complete'
 Bundle 'Shougo/neocomplcache.vim'
 Bundle 'Shougo/neosnippet.vim'
 Bundle 'Shougo/neosnippet-snippets'
@@ -38,13 +37,8 @@ Bundle 'AfterColors.vim'
 Bundle 'ctrlp.vim'
 Bundle 'surround.vim'
 Bundle 'EasyMotion'
-Bundle 'a.vim'
 Bundle 'Solarized'
 Bundle 'AutoClose'
-Bundle 'lua.vim'
-Bundle 'luainspect.vim'
-Bundle 'netrw.vim'
-Bundle 'matchit.zip'
 Bundle 'Distinguished'
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
@@ -175,6 +169,7 @@ else
         colorscheme desert
     else
         set t_Co=256
+        set background=dark
         colorscheme distinguished
     endif
 endif
@@ -318,15 +313,6 @@ let g:bufExplorerShowDirectories=1
 let g:bufExplorerSplitRight=1
 
 """"""""""""""""""""""""""""""
-" Alternate
-""""""""""""""""""""""""""""""
-nmap <leader>al :A<cr>
-nmap <leader>vsal :abo vs<cr>:A<cr>
-nmap <leader>spal :abo sp<cr>:A<cr>
-autocmd FileType objc let g:alternateExtensions_h = 'm'
-autocmd FileType objc let g:alternateExtensions_m = 'h'
-
-""""""""""""""""""""""""""""""
 " nerdTree
 """"""""""""""""""""""""""""""
 nmap <silent> <leader>nt :NERDTree<cr>
@@ -345,20 +331,6 @@ let g:SuperTabDefaultCompletionType='context'
 " NeoComplCache
 """"""""""""""""""""""""""""""
 let g:neocomplcache_enable_at_startup = 1
-
-""""""""""""""""""""""""""""""
-" clang_complete
-""""""""""""""""""""""""""""""
-let g:clang_complete_copen = 1
-let g:clang_snippets = 1
-let g:clang_snippets_engine = 'clang_complete'
-let g:clang_trailing_placeholder = 1
-let g:clang_user_options = '-std=c++11'
-let g:clang_periodic_quickfix = 0
-let g:clang_close_preview = 1
-if has('mac')
-    let g:clang_library_path = '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib'
-endif
 
 """"""""""""""""""""""""""""""
 " NeoSnippet
@@ -413,12 +385,6 @@ let g:jedi#show_call_signatures = 0
 let g:jedi#popup_select_first = 0
 
 """"""""""""""""""""""""""""""
-" lua
-""""""""""""""""""""""""""""""
-let g:lua_inspect_warnings = 0
-let g:loaded_luainspect = 0
-
-""""""""""""""""""""""""""""""
 " NeoComplCache <> Jedi
 """"""""""""""""""""""""""""""
 " make neocomplcache use jedi#completions omini function for python scripts
@@ -430,40 +396,3 @@ endif
 let g:neocomplcache_force_omni_patterns = {}
 let g:neocomplcache_force_omni_patterns.python = '[^. \t]\.\w*'
 
-""""""""""""""""""""""""""""""
-" Tagbar
-""""""""""""""""""""""""""""""
-" add a definition for Objective-C to tagbar
-let g:tagbar_type_objc = {
-    \ 'ctagstype' : 'ObjectiveC',
-    \ 'kinds'     : [
-        \ 'i:interface',
-        \ 'I:implementation',
-        \ 'p:Protocol',
-        \ 'm:Object_method',
-        \ 'c:Class_method',
-        \ 'v:Global_variable',
-        \ 'F:Object field',
-        \ 'f:function',
-        \ 'p:property',
-        \ 't:type_alias',
-        \ 's:type_structure',
-        \ 'e:enumeration',
-        \ 'M:preprocessor_macro',
-    \ ],
-    \ 'sro'        : ' ',
-    \ 'kind2scope' : {
-        \ 'i' : 'interface',
-        \ 'I' : 'implementation',
-        \ 'p' : 'Protocol',
-        \ 's' : 'type_structure',
-        \ 'e' : 'enumeration'
-    \ },
-    \ 'scope2kind' : {
-        \ 'interface'      : 'i',
-        \ 'implementation' : 'I',
-        \ 'Protocol'       : 'p',
-        \ 'type_structure' : 's',
-        \ 'enumeration'    : 'e'
-    \ }
-\ }
