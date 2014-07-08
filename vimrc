@@ -20,6 +20,7 @@ Bundle 'ervandew/supertab'
 Bundle 'Shougo/neocomplcache.vim'
 Bundle 'Shougo/neosnippet.vim'
 Bundle 'Shougo/neosnippet-snippets'
+" make in .vim/bundle/vimproc.vim/
 Bundle 'Shougo/vimproc.vim'
 Bundle 'Shougo/vimshell.vim'
 Bundle 'davidhalter/jedi-vim'
@@ -28,6 +29,8 @@ Bundle 'plasticboy/vim-markdown'
 Bundle 'mattn/emmet-vim'
 Bundle 'othree/html5.vim'
 Bundle 'xolox/vim-misc'
+" npm install in .vim/bundle/tern_for_vim/
+Bundle 'marijnh/tern_for_vim'
 " vim-scripts repos
 Bundle 'The-NERD-Commenter'
 Bundle 'The-NERD-tree'
@@ -171,7 +174,7 @@ else
     else
         set t_Co=256
         set background=dark
-        colorscheme xoria256
+        colorscheme distinguished
     endif
 endif
 
