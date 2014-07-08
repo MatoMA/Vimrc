@@ -40,6 +40,7 @@ Bundle 'EasyMotion'
 Bundle 'Solarized'
 Bundle 'AutoClose'
 Bundle 'Distinguished'
+Bundle 'xoria256.vim'
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (ie. when working on your own plugin)
@@ -170,7 +171,7 @@ else
     else
         set t_Co=256
         set background=dark
-        colorscheme distinguished
+        colorscheme xoria256
     endif
 endif
 
