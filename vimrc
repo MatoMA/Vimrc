@@ -31,6 +31,7 @@ Bundle 'othree/html5.vim'
 Bundle 'xolox/vim-misc'
 " npm install in .vim/bundle/tern_for_vim/
 Bundle 'marijnh/tern_for_vim'
+Bundle 'scrooloose/syntastic'
 " vim-scripts repos
 Bundle 'The-NERD-Commenter'
 Bundle 'The-NERD-tree'
@@ -400,3 +401,8 @@ endif
 let g:neocomplcache_force_omni_patterns = {}
 let g:neocomplcache_force_omni_patterns.python = '[^. \t]\.\w*'
 
+""""""""""""""""""""""""""""""
+" Syntastic
+""""""""""""""""""""""""""""""
+let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_check_on_open = 1
