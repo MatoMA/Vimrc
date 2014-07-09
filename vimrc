@@ -385,6 +385,12 @@ au BufNewFile,BufRead *.ejs :call EJS_Configuration()<cr>
 if os=='mac'
     let g:vimshell_editor_command = '/opt/local/bin/mvim'
 endif
+function! OpenVimShell()
+    execute "belowright split"
+    execute "VimShell"
+    execute "resize" . winheight(0) * 2/3
+endfunction
+nmap <silent> <leader>sh :call OpenVimShell()<cr>
 
 """"""""""""""""""""""""""""""
 " Jedi
