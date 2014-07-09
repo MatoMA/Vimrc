@@ -29,7 +29,7 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'mattn/emmet-vim'
 Bundle 'othree/html5.vim'
-Bundle 'lepture/vim-css'
+Bundle 'hail2u/vim-css3-syntax'
 Bundle 'xolox/vim-misc'
 " npm install in .vim/bundle/tern_for_vim/
 Bundle 'marijnh/tern_for_vim'
