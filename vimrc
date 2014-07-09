@@ -47,6 +47,7 @@ Bundle 'EasyMotion'
 Bundle 'Solarized'
 Bundle 'Distinguished'
 Bundle 'xoria256.vim'
+Bundle 'Tabular'
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (ie. when working on your own plugin)
