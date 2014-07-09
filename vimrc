@@ -33,6 +33,7 @@ Bundle 'hail2u/vim-css3-syntax'
 Bundle 'xolox/vim-misc'
 " npm install in .vim/bundle/tern_for_vim/
 Bundle 'marijnh/tern_for_vim'
+" npm install -g jshint
 Bundle 'scrooloose/syntastic'
 Bundle 'Raimondi/delimitMate'
 " vim-scripts repos
