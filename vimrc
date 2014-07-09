@@ -307,6 +307,7 @@ nmap <leader>qa :qa<cr>
 nmap <leader>wq :wq<cr>
 nmap <leader>w :w<cr>
 nmap <leader>wa :wa<cr>
+nmap <leader>ew <Esc>:w<cr>
 nmap <C-s> :w<cr>
 nmap ; A;<esc>
 
