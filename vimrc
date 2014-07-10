@@ -277,7 +277,6 @@ set viminfo^=%
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editing mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-imap <leader>e <Esc>
 " Remap VIM 0 to first non-blank character
 map 0 ^
 
@@ -306,6 +305,9 @@ nmap <leader>w :w<cr>
 nmap <leader>wa :wa<cr>
 nmap <C-s> :w<cr>
 nmap ; A;<esc>
+imap <leader>e <Esc>
+imap <leader>ew <Esc>:w<cr>
+imap <leader>eq <Esc>:q<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Filetype Settings
