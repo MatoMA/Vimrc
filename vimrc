@@ -361,6 +361,8 @@ let g:clang_periodic_quickfix = 0
 let g:clang_close_preview = 1
 if has('mac')
     let g:clang_library_path = '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib'
+    let g:clang_user_options = '-w -fblocks -fobjc-arc -D __IPHONE_OS_VERSION_MIN_REQUIRED=40300 -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/usr/include'
+    imap <leader>cc <C-X><C-U>
 endif
 
 """"""""""""""""""""""""""""""
