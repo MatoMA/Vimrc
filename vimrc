@@ -336,7 +336,8 @@ imap <leader>s <C-s>
 """"""""""""""""""""""""""""""
 " SuperTab
 """"""""""""""""""""""""""""""
-let g:SuperTabDefaultCompletionType='context'
+let g:SuperTabDefaultCompletionType = 'context'
+let g:SuperTabContextDefaultCompletionType = '<c-n>'
 
 """"""""""""""""""""""""""""""
 " NeoComplCache
