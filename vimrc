@@ -421,3 +421,8 @@ let g:neocomplcache_force_omni_patterns.python = '[^. \t]\.\w*'
 """"""""""""""""""""""""""""""
 let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_check_on_open = 1
+
+""""""""""""""""""""""""""""""
+" Dart Configuration
+""""""""""""""""""""""""""""""
+map <C-r> :!clear;dart %<cr>
