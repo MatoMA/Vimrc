@@ -425,4 +425,4 @@ let g:syntastic_check_on_open = 1
 """"""""""""""""""""""""""""""
 " Dart Configuration
 """"""""""""""""""""""""""""""
-map <C-r> :!clear;dart %<cr>
+map <C-r> :w<cr>:!clear;dart %<cr>
