@@ -30,6 +30,7 @@ Bundle 'mattn/emmet-vim'
 Bundle 'othree/html5.vim'
 Bundle 'xolox/vim-misc'
 Bundle 'Raimondi/delimitMate'
+Bundle 'thinca/vim-quickrun'
 " vim-scripts repos
 Bundle 'The-NERD-Commenter'
 Bundle 'The-NERD-tree'
@@ -477,3 +478,5 @@ let g:tagbar_type_objc = {
         \ 'enumeration'    : 'e'
     \ }
 \ }
+
+set sessionoptions-=options  " Don't save options"
