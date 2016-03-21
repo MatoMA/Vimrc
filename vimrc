@@ -21,8 +21,8 @@ Bundle 'Rip-Rip/clang_complete'
 Bundle 'Shougo/neocomplcache.vim'
 Bundle 'Shougo/neosnippet.vim'
 Bundle 'Shougo/neosnippet-snippets'
-Bundle 'Shougo/vimproc.vim'
-Bundle 'Shougo/vimshell.vim'
+"Bundle 'Shougo/vimproc.vim'
+"Bundle 'Shougo/vimshell.vim'
 Bundle 'davidhalter/jedi-vim'
 Bundle 'jelera/vim-javascript-syntax'
 Bundle 'plasticboy/vim-markdown'
@@ -42,12 +42,12 @@ Bundle 'surround.vim'
 Bundle 'EasyMotion'
 Bundle 'a.vim'
 Bundle 'Solarized'
-Bundle 'lua.vim'
-Bundle 'luainspect.vim'
-Bundle 'netrw.vim'
+"Bundle 'lua.vim'
+"Bundle 'luainspect.vim'
+"Bundle 'netrw.vim'
 Bundle 'matchit.zip'
 Bundle 'Distinguished'
-Bundle 'Tabular'
+"Bundle 'Tabular'
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (ie. when working on your own plugin)
@@ -117,6 +117,7 @@ set mouse=a
 
 " line number
 set nu
+set relativenumber
 
 " Ignore compiled files
 set wildignore=*.o,*~,*.pyc
@@ -309,6 +310,7 @@ nmap ; A;<esc>
 imap <leader>e <Esc>
 imap <leader>ew <Esc>:w<cr>
 imap <leader>eq <Esc>:q<cr>
+inoremap jk <Esc>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Filetype Settings
@@ -404,30 +406,11 @@ endfunction
 au BufNewFile,BufRead *.ejs :call EJS_Configuration()<cr>
 
 """"""""""""""""""""""""""""""
-" VimShell
-""""""""""""""""""""""""""""""
-if os=='mac'
-    let g:vimshell_editor_command = '/opt/local/bin/mvim'
-endif
-function! OpenVimShell()
-    execute "belowright split"
-    execute "VimShell"
-    execute "resize" . winheight(0) * 2/3
-endfunction
-nmap <silent> <leader>sh :call OpenVimShell()<cr>
-
-""""""""""""""""""""""""""""""
 " Jedi
 """"""""""""""""""""""""""""""
 let g:jedi#popup_on_dot = 0
 let g:jedi#show_call_signatures = 0
 let g:jedi#popup_select_first = 0
-
-""""""""""""""""""""""""""""""
-" lua
-""""""""""""""""""""""""""""""
-let g:lua_inspect_warnings = 0
-let g:loaded_luainspect = 0
 
 """"""""""""""""""""""""""""""
 " NeoComplCache <> Jedi
